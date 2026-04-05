@@ -1,0 +1,7 @@
+{
+  "sampling_rate_hz": 20,
+  "channels": ["accel_x", "accel_y", "accel_z", "gyro_x", "gyro_y", "gyro_z"],
+  "window_pretrain_sec": 10,
+  "window_supervised_sec": 5,
+  "overlap": 0.5
+}

@@ -1,0 +1,46 @@
+How the Processed Outputs Could Feed a Downstream Self-Supervised Learning Pipeline
+===================================================================================
+
+The processed outputs are designed to remain close to the original signals while being standardised into fixed-shape arrays with consistent metadata. This makes them suitable for self-supervised representation learning across modalities.
+
+HAR (PAMAP2 and WISDM)
+----------------------
+The HAR outputs are harmonised into a common six-channel schema:
+- accel_x, accel_y, accel_z
+- gyro_x, gyro_y, gyro_z
+
+Because PAMAP2 and WISDM share the same channel layout, sampling rate (20 Hz), and window definitions, unlabeled 10-second windows can be used directly for self-supervised pretraining. Examples of possible pretext tasks include:
+- contrastive learning between augmented views of the same window
+- temporal order prediction
+- masked sensor reconstruction
+
+The labeled 5-second windows can then be used for downstream supervised evaluation of the learned representations.
+
+EEG (EEGMMIDB)
+--------------
+The EEG outputs consist of fixed 4-second windows aligned to T1 and T2 motor imagery events. These windows preserve event timing and channel structure, making them suitable for self-supervised learning methods such as:
+- masked channel reconstruction
+- temporal contrastive learning
+- positive pair generation from augmented versions of the same trial window
+
+After pretraining, the learned features could be fine-tuned for motor imagery classification.
+
+ECG (PTB-XL)
+------------
+The PTB-XL outputs preserve all 12 leads and use fixed-length 10-second signals at 100 Hz. These signals can support self-supervised objectives such as:
+- lead masking and reconstruction
+- contrastive learning across signal augmentations
+- segment-level representation learning
+
+The preserved patient-safe fold information supports fair downstream evaluation after self-supervised pretraining.
+
+Why this output format is suitable
+----------------------------------
+The current processed outputs are well suited for downstream self-supervised learning because they provide:
+- fixed-shape float32 arrays
+- consistent metadata per sample
+- preserved provenance and split information
+- minimal handcrafted feature engineering
+- modality-specific but machine-readable representations
+
+This allows a future modelling pipeline to load arrays directly, sample batches consistently, and pair signals with metadata for pretraining and evaluation.

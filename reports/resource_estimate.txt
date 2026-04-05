@@ -1,0 +1,69 @@
+Resource Estimate
+=================
+
+Raw Data Storage
+----------------
+Total raw data size: ~14.3 GB
+
+This includes:
+- PAMAP2 dataset (UCI HAR)
+- WISDM dataset (smartphone + smartwatch)
+- EEGMMIDB dataset (EDF EEG recordings)
+- PTB-XL dataset (ECG waveforms and metadata)
+
+The size reflects both compressed archives and extracted files.
+
+
+Processed Data Storage
+----------------------
+Total processed data size: ~11.6 MB
+
+This includes:
+- 100-sample representative packs for each dataset:
+  - PAMAP2 (HAR)
+  - WISDM (HAR)
+  - EEGMMIDB (EEG)
+  - PTB-XL (ECG)
+- Corresponding metadata CSV files
+- Processed manifest
+
+The small footprint is due to storing only representative samples rather than full processed datasets.
+
+
+Peak RAM Usage
+--------------
+Estimated peak RAM usage: < 2 GB
+
+Breakdown:
+- HAR datasets (PAMAP2, WISDM):
+  Processed per subject or recording (~tens of MB)
+
+- EEG dataset (EEGMMIDB):
+  EDF files loaded per run (~100–200 MB)
+
+- ECG dataset (PTB-XL):
+  Records processed individually (~a few MB per record)
+
+The pipeline avoids loading entire datasets into memory and processes data incrementally (streaming approach).
+
+
+Expected Runtime
+----------------
+Estimated preprocessing runtime on a standard laptop:
+
+- PAMAP2: ~1–2 minutes
+- WISDM: ~2–3 minutes
+- EEGMMIDB: ~3–5 minutes
+- PTB-XL: ~2–3 minutes
+
+Total preprocessing time: ~10 minutes
+
+Validation script runtime: < 1 minute
+
+
+Notes
+-----
+- Download time is not included in preprocessing runtime and may take several hours due to dataset sizes.
+- The pipeline is designed to be scalable and memory-efficient.
+- The pipeline supports re-running without re-downloading datasets by skipping existing files. Initial downloads were performed via the same script.
+- Processing is reproducible via scripted commands from a clean directory structure.

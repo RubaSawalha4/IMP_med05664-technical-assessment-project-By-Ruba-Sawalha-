@@ -1,0 +1,70 @@
+Validation Report
+=================
+
+Dataset: pamap2
+  Metadata rows: 100
+  NPZ files: 100
+  Missing metadata columns: []
+  All arrays valid: True
+  Any NaN values: False
+  Any infinite values: False
+  Dtypes found: ['float32']
+
+Dataset: wisdm
+  Metadata rows: 100
+  NPZ files: 100
+  Missing metadata columns: []
+  All arrays valid: True
+  Any NaN values: False
+  Any infinite values: False
+  Dtypes found: ['float32']
+
+Dataset: eegmmidb
+  Metadata rows: 100
+  NPZ files: 100
+  Missing metadata columns: []
+  All arrays valid: True
+  Any NaN values: False
+  Any infinite values: False
+  Dtypes found: ['float32']
+
+Dataset: ptbxl
+  Metadata rows: 100
+  NPZ files: 100
+  Missing metadata columns: []
+  All arrays valid: True
+  Any NaN values: False
+  Any infinite values: False
+  Dtypes found: ['float32']
+
+HAR Harmonisation
+-----------------
+pamap_sampling_rates: ['20']
+wisdm_sampling_rates: ['20']
+same_sampling_rate: True
+pamap_n_channels: ['6']
+wisdm_n_channels: ['6']
+same_channel_count: True
+pamap_channel_schema: ['["accel_x", "accel_y", "accel_z", "gyro_x", "gyro_y", "gyro_z"]']
+wisdm_channel_schema: ['["accel_x", "accel_y", "accel_z", "gyro_x", "gyro_y", "gyro_z"]']
+same_channel_schema: True
+pamap_n_samples: ['100', '200']
+wisdm_n_samples: ['100', '200']
+same_window_sizes: True
+
+HAR Label Handling
+------------------
+pamap2: {'supervised_rows': 50, 'contains_label_0': False}
+wisdm: {'supervised_rows': 50, 'contains_label_0': False}
+
+EEG Metadata Checks
+-------------------
+unique_event_labels: ['T1', 'T2']
+contains_only_t1_t2: True
+recorded_runs: ['R04', 'R08', 'R12']
+
+PTB-XL Metadata Checks
+----------------------
+unique_splits: ['test', 'train_cv_1', 'train_cv_2', 'train_cv_3', 'train_cv_4', 'train_cv_5', 'train_cv_6', 'train_cv_7', 'train_cv_8', 'train_cv_9']
+has_test_split: True
+has_train_cv_splits: True

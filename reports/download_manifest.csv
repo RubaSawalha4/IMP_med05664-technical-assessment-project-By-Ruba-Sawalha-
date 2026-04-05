@@ -1,0 +1,5 @@
+dataset_name,modality,status,version,source_url,download_date,output_file,download_status,file_size_bytes,error_message
+PAMAP2,HAR,mandatory,UCI-231,https://archive.ics.uci.edu/static/public/231/pamap2+physical+activity+monitoring.zip,2026-03-28T16:13:13.471965,data\raw\pamap2.zip,skipped_existing,688226940,
+WISDM,HAR,mandatory,UCI-507,https://archive.ics.uci.edu/static/public/507/wisdm+smartphone+and+smartwatch+activity+and+biometrics+dataset.zip,2026-03-28T16:13:13.473290,data\raw\wisdm.zip,skipped_existing,310292805,
+EEGMMIDB,EEG,mandatory,1.0.0,https://physionet.org/content/eegmmidb/get-zip/1.0.0/,2026-03-28T16:13:13.474774,data\raw\eegmmidb.zip,skipped_existing,1997435063,
+PTB-XL,ECG,mandatory,1.0.3,https://physionet.org/content/ptb-xl/get-zip/1.0.3/,2026-03-28T16:13:13.475750,data\raw\ptbxl.zip,skipped_existing,1839504686,
