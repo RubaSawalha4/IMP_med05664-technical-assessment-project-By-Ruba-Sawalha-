@@ -1,4 +1,4 @@
-#Multi-Modal Biomedical Data Preprocessing Pipeline (MED05664 Technical Assessment)
+#Multi-Modal Biomedical Data Preprocessing Pipeline (MED05664 Technical Assessment_Candidate:RubaSawalha)
 
 ## Overview
 
