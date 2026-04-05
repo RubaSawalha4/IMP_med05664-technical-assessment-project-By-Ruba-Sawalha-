@@ -1,5 +1,6 @@
 data/raw/
 data/processed/
+submission_sample/
 __pycache__/
 *.zip
 *.edf
