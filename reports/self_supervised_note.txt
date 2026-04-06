@@ -1,4 +1,4 @@
-How the Processed Outputs Could Feed a Downstream Self-Supervised Learning Pipeline
+How the Processed Outputs Could Feed a Downstream Self-Supervised Learning Pipeline (#BONUS from section 9)
 ===================================================================================
 
 The processed outputs are designed to remain close to the original signals while being standardised into fixed-shape arrays with consistent metadata. This makes them suitable for self-supervised representation learning across modalities.
