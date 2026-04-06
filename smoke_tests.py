@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 
 # ======================================================
-# SMOKE TESTS – IMPERIAL ASSESSMENT BONUS
-# Candidate: Ruba Sawalha
+# SMOKE TESTS – IMPERIAL ASSESSMENT (BONUS)
+# Candidate: Ruba Sawalha 
 # Purpose:
 #   - Quick format checks
 #   - Metadata presence checks
